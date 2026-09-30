@@ -1,0 +1,331 @@
+<!doctype html>
+<title>RetroBoard Privacy Policy</title>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap">
+<style>
+  :root {
+    --paper: #F5F1E4;
+    --ink: #2A2A22;
+    --ink-soft: #5B5A4C;
+    --rule: #D8D0B8;
+    --keycap: #9C8F73;
+    --keycap-top: #F2EAD0;
+    --accent: #4D5A52;
+    --accent-strong: #3A453F;
+    --mono: "Space Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #1C1E1A;
+      --ink: #EDE8D8;
+      --ink-soft: #A7A390;
+      --rule: #383B33;
+      --keycap: #7C725B;
+      --keycap-top: #2F332C;
+      --accent: #B9C4B4;
+      --accent-strong: #D6DED2;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #1C1E1A;
+    --ink: #EDE8D8;
+    --ink-soft: #A7A390;
+    --rule: #383B33;
+    --keycap: #7C725B;
+    --keycap-top: #2F332C;
+    --accent: #B9C4B4;
+    --accent-strong: #D6DED2;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    padding-inline: 20px;
+    padding-block: 3.5rem 5rem;
+  }
+
+  .sheet {
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+
+  /* ---- Masthead: a typed key-row, literal to the product ---- */
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 2.6rem;
+  }
+  .keycap {
+    flex: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 7px;
+    background: var(--keycap);
+    display: grid;
+    place-items: center;
+    box-shadow:
+      inset 0 -5px 0 rgba(0,0,0,0.22),
+      inset 0 2px 0 rgba(255,255,255,0.18);
+  }
+  .keycap span {
+    width: 1.45rem;
+    height: 1.45rem;
+    border-radius: 3px;
+    background: var(--keycap-top);
+  }
+  .masthead-text .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    display: block;
+  }
+  .masthead-text .product {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--accent-strong);
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 2.3rem;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.4rem;
+    text-wrap: balance;
+  }
+  .updated {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin: 0 0 2.4rem;
+  }
+  .updated code {
+    background: none;
+    padding: 0;
+    font: inherit;
+  }
+
+  .lede {
+    font-size: 1.12rem;
+    color: var(--ink);
+    max-width: 38rem;
+  }
+
+  .callout {
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+    background: color-mix(in srgb, var(--accent) 10%, var(--paper));
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 1.1rem 1.25rem;
+    margin: 1.8rem 0 2.8rem;
+  }
+  .callout .tag {
+    flex: none;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-strong);
+    border: 1px solid var(--accent-strong);
+    border-radius: 4px;
+    padding: 0.2rem 0.45rem;
+    margin-top: 0.15rem;
+  }
+  .callout p { margin: 0; }
+
+  section { margin-top: 2.5rem; }
+  section:first-of-type { margin-top: 0; }
+
+  h2 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 0.92rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent-strong);
+    margin: 0 0 0.9rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  p { margin: 0 0 1rem; max-width: 40rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.3rem; max-width: 40rem; }
+  li { margin-bottom: 0.4rem; }
+  li::marker { color: var(--ink-soft); }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.86em;
+    background: color-mix(in srgb, var(--ink) 8%, transparent);
+    padding: 0.12rem 0.4rem;
+    border-radius: 4px;
+  }
+  strong { font-weight: 600; }
+
+  .contact {
+    margin-top: 3rem;
+    padding-top: 1.8rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 0.8rem;
+  }
+  .contact .label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .contact a {
+    font-family: var(--mono);
+    color: var(--accent-strong);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+  }
+  .contact a:hover, .contact a:focus-visible { border-bottom-color: var(--accent-strong); }
+
+  a:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--accent-strong);
+    outline-offset: 2px;
+  }
+
+  footer {
+    max-width: 42rem;
+    margin: 3.5rem auto 0;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 480px) {
+    body { font-size: 16px; padding-block: 2.4rem 4rem; }
+    h1 { font-size: 1.85rem; }
+  }
+</style>
+
+<article class="sheet">
+
+  <div class="masthead">
+    <div class="keycap" aria-hidden="true"><span></span></div>
+    <div class="masthead-text">
+      <span class="eyebrow">Input Method Editor</span>
+      <span class="product">RetroBoard</span>
+    </div>
+  </div>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated <code>5 August 2026</code></p>
+
+  <p class="lede">RetroBoard is an on-screen keyboard for Android. Because a
+  keyboard technically sits between you and everything you type, this policy
+  is written to state plainly what the app does and does not do with your
+  information — and how you can verify it yourself.</p>
+
+  <div class="callout">
+    <span class="tag">Summary</span>
+    <p>RetroBoard does not collect, store, transmit, or share any personal
+    data. There is no server it could send anything to.</p>
+  </div>
+
+  <section>
+    <h2>What RetroBoard does not collect</h2>
+    <p>RetroBoard does <strong>not</strong> collect, log, record, retain, or
+    transmit:</p>
+    <ul>
+      <li>anything you type, including text, passwords, or messages</li>
+      <li>your contacts, calendar, photos, files, or accounts</li>
+      <li>your location</li>
+      <li>device identifiers, advertising IDs, or IP addresses</li>
+      <li>usage analytics, crash reports, or diagnostics</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How your typing is handled</h2>
+    <p>As an Android input method, RetroBoard receives the keys you tap in
+    order to insert the corresponding characters into the app you're using.
+    This happens entirely in memory on your device, for the moment it takes
+    to deliver the character. Nothing you type is written to storage, kept in
+    a history, used for learning or prediction, or sent anywhere.</p>
+    <p>RetroBoard has no word prediction, no autocorrect dictionary, no
+    typing history, and no cloud sync — there is nothing to store and
+    nothing to upload.</p>
+  </section>
+
+  <section>
+    <h2>Permissions</h2>
+    <p>RetroBoard requests a single Android permission: <code>VIBRATE</code>,
+    used only to produce the optional haptic tick when you press a key. It
+    grants no access to any information, and you can turn the vibration off
+    in the app's settings.</p>
+    <p>In particular, RetroBoard does <strong>not</strong> request the
+    <code>INTERNET</code> permission. Without it, the app is technically
+    incapable of making a network connection — this isn't a promise about our
+    conduct, it's a property of the app that anyone can verify by inspecting
+    its manifest.</p>
+  </section>
+
+  <section>
+    <h2>Data stored on your device</h2>
+    <p>RetroBoard saves exactly three preferences locally, using Android's
+    standard private app storage:</p>
+    <ul>
+      <li>your chosen key shape (Classic or Rounded)</li>
+      <li>your chosen deck style (Solid or Frosted)</li>
+      <li>your chosen keypress feedback (sound, vibration, both, or silent)</li>
+    </ul>
+    <p>These never leave your device and are deleted when you uninstall the
+    app.</p>
+  </section>
+
+  <section>
+    <h2>Third parties</h2>
+    <p>RetroBoard contains no advertising, no analytics, no crash-reporting
+    service, and no third-party tracking SDKs. No data is shared with
+    anyone, because none is collected.</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>RetroBoard is suitable for all ages and does not knowingly collect any
+    information from anyone, including children under 13.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the updated version will be published at this
+    same URL and the "Last updated" date revised. Any future version that
+    introduces data collection would be accompanied by an app update and a
+    corresponding change to the Data safety disclosure on Google Play.</p>
+  </section>
+
+  <div class="contact">
+    <span class="label">Questions</span>
+    <a href="mailto:krishnatejakota@gmail.com">krishnatejakota@gmail.com</a>
+  </div>
+
+  <footer>RetroBoard · com.retroboard.ime</footer>
+
+</article>
